@@ -10,13 +10,15 @@
 <body>
   <header class="header">
     <nav>
-      <img src="resources/logo.png" alt="Travelo" class="logo">
+      <div class="time">
+        <span id="current-time"></span>
+      </div>
       <ul>
         <li>
           <a href="page_lien.html">liste des liens</a>
         </li>
         <li>
-          <a href="#">jsp encore</a>
+          <a  href="info.html">qui je suis ?</a>
         </li>
         <li class="recherche">
           <a href="#">
@@ -53,5 +55,22 @@
     <img src="resources/black_shadow.png"  class="black-shadow">
   </main>
   <script src="js/app.js"></script>
+  <script src="js/script2.js"></script>
+    <script>
+      function updateTime() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        
+        // Ajout d'un zéro devant les chiffres de moins de 10
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        
+        var timeString = hours + ":" + minutes;
+        document.getElementById('current-time').textContent = timeString;
+      }
+    
+      setInterval(updateTime, 1000);
+    </script>
 </body>
 </html>
