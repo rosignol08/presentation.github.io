@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap');
 
-body{
+/*pour que ça scroll doucement*/
+html {
+    scroll-behavior: smooth;
+}  
+
+body {
     font-family: "Poppins", sans-serif;
-    background-color: rgb(201, 201, 201);
+    background-color: #e8f7e9;
 }
 
 * {
@@ -11,11 +16,16 @@ body{
     box-sizing: border-box;
 }
 
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
 }
-
 
 .logo {
     width: 200px;
@@ -46,6 +56,8 @@ body{
     background-color: orange;
     color: white;
     border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .banner {
@@ -91,6 +103,11 @@ body{
 .section {
     width: 25%;
     padding: 20px;
+    position: relative;
+    display: flex; /* Ajouter cette ligne */
+    flex-direction: column; /* Ajouter cette ligne */
+    align-items: center; /* Ajouter cette ligne */
+    justify-content: center; /* Ajouter cette ligne */
 }
 
 .section .icon {
@@ -107,6 +124,14 @@ body{
 
 .section .text {
     text-align: center;
+    height: 7.65em; /* Approximately 2 lines of text */
+    overflow: hidden;
+    position: relative;
+    transition: height 0.3s;
+}
+
+.section:hover .text {
+    height: auto; /* Expand height on hover */
 }
 
 .section .text h2 {
@@ -120,13 +145,34 @@ body{
     margin: 10px 0;
 }
 
+.section .text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #e8f7e9);
+    transition: height 0.3s;
+}
+
+.section:hover .text::after {
+    height: 0;
+}
+
+.section .button {
+    margin-top: 20px; /* Ajouter cette ligne */
+}
+
+
 .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    margin-top: 20px;
     background-color: lightgray;
+    padding: 0 20px;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 .social {
@@ -146,8 +192,7 @@ body{
 .info {
     display: flex;
     flex-direction: column;
-    align-items: right;
-    margin-right: 5vh;
+    align-items: flex-end;
 }
 
 .info p {
@@ -157,6 +202,97 @@ body{
 .footer .logo {
     width: 100px;
 }
+
+@keyframes verslaDroite {
+    0% {
+        opacity: 0;
+            transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes verslaGauche {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.example {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: all 0.5s ease-out;
+}
+.example.hidden {
+    animation: verslaGauche 0.5s ease-out forwards;
+}
+.example.visible {
+    animation: verslaDroite 0.5s ease-out forwards;
+  }
+  
+.example:not(.visible) {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.example:not(.visible):not(.hidden) {
+    opacity: 0;
+    transform: translateX(-100%);
+    }
+
+.example-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+.example-image, .example-description {
+    flex: 1 1 45%;
+}
+
+.example-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.example-description {
+    font-size: 1rem;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.example-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.example-description p {
+    margin-bottom: 1rem;
+
+}
+
+.example-description pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
 
 .back-to-top a{
     color: #ebebeb; /* Couleur de base du texte */
