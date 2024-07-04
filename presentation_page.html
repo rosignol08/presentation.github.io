@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper">
         <div class="back-to-top">
-            <a href="index.html" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><i class="fas fa-angle-left"></i> <span>←</span></a>
+            <a href="index.html" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><i class="fas fa-angle-left"></i> <span><</span></a>
         </div>
         <div class="container">
             <div class="banner">
@@ -20,13 +20,13 @@
                     <p>Je suis un jeune programmeur passionné avec des compétences diverses en informatique. Je crée des jeux vidéo ainsi que des petits programmes à mes heures perdues. Explorez mon GitHub ainsi que mon Replit pour voir mes compétences en action.</p>
                     <!-- <a href="#" class="button">Explore plus</a> -->
                 </div>
-                <div class="image">
+                <div class="image" class="tilt-in-fwd-tr">
                     <img src="resources/logo_affiche.jpg" alt="Banner Romaric">
                 </div>
             </div>
             <div class="content">
                 <div class="section">
-                    <div class="icon">
+                    <div class="icon" style="animation-delay: 0s;">
                         <img src="resources/cv.svg" alt="cv">
                     </div>
                     <div class="text">
@@ -36,7 +36,7 @@
                     <a href="resources/cv_bien.pdf" class="button">Consultez mon CV</a>
                 </div>
                 <div class="section">
-                    <div class="icon">
+                    <div class="icon" style="animation-delay: 0.2s;">
                         <img src="resources/diploma-verified.svg" alt="univp8">
                     </div>
                     <div class="text">
@@ -46,7 +46,7 @@
                     <a href="https://informatique.up8.edu/licence-iv/" class="button">Site de ma licence</a>
                 </div>
                 <div class="section">
-                    <div class="icon">
+                    <div class="icon" style="animation-delay: 0.4s;">
                         <img src="resources/github.svg" alt="github">
                     </div>
                     <div class="text">
@@ -56,7 +56,7 @@
                     <a href="https://github.com/rosignol08" class="button">Mon Github</a>
                 </div>
                 <div class="section">
-                    <div class="icon">
+                    <div class="icon" style="animation-delay: 0.6s;">
                         <img src="resources/New_Replit_Logo.png" alt="replit">
                     </div>
                     <div class="text">
@@ -98,24 +98,45 @@
     <section class="example-section">
         <div class="example">
           <div class="example-image">
-            <img src="path/to/image1.jpg" alt="Example Image 1">
+            <!-- <img src="path/to/image1.jpg" alt="Example Image 1"> -->
+            <p>J'ai des compétences de programmation en divers langages comme le C. Vous pouvez consulter un exemple <a href="https://github.com/rosignol08/recherche_occurence_en_C">ici</a>.</p>
           </div>
           <div class="example-description">
-            <h3>Example Code 1</h3>
-            <p>This is a description of the code.</p>
-            <pre><code>/* Your code here */</code></pre>
+            <h3>Exemple de Code</h3>
+            <pre><code>
+                int main() {
+                    printf("Hello, World!\n");
+                    return 0;
+                }
+                </code></pre>
           </div>
         </div>
         <div class="example">
           <div class="example-description">
-            <h3>Example Code 2</h3>
-            <p>This is a description of the code.</p>
-            <pre><code>/* Your code here */</code></pre>
+            <h3>Exemple de Code (encore)</h3>
+            <pre><code>
+                int main() {
+                    std::cout << "Hello, World!";
+                    return 0;
+                }
+            </code></pre>
           </div>
-          <div class="example-image">
-            <img src="path/to/image2.jpg" alt="Example Image 2">
-          </div>
+            <div class="example-image">
+                <p>Ainsi que le C++, consultable <a href="https://github.com/rosignol08/ecosyst-me-cpp">ici</a> également.</p>
+                <!-- <img src="path/to/image1.jpg" alt="Example Image 2"> -->
+            </div>
         </div>
+        <div class="example">
+            <div class="example-image">
+              <!-- <img src="path/to/image1.jpg" alt="Example Image 1"> -->
+              <p>Dans le cadre d’un concours universitaire, j’ai eu l’occasion de faire un jeu vidéo que j’ai publié sur ma page <a href="https://rosignol.itch.io/">itch</a> afin d’améliorer mes compétences dans le domaine.</p>
+            </div>
+            <div class="example-description">
+              <h3>Création d'un jeu</h3>
+            <img src="resources/img_jeu_1.png" alt="Example Image 1" style="width: 50%; height: auto;">
+              
+            </div>
+          </div>
         <!-- Add more examples as needed -->
     </section>
     <div class="footer">
