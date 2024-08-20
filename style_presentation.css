@@ -246,7 +246,7 @@ input[type="checkbox"]:checked::before {
     transform: translateX(100%);
     background-color: #d3d018;
 }
-
+/*https://www.youtube.com/watch?v=FBgyJIW04BM    fini ce truc*/
 .section:hover .text::after {
     height: 0;
 }
