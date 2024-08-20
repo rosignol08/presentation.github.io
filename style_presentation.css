@@ -46,7 +46,7 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: black;
+    color: #170816;
     font-weight: bold;
 }
 
@@ -82,12 +82,15 @@ body {
  .banner .text h1 {
     font-size: 40px;
     font-weight: bold;
+    color: #170816;
     animation:slide-in-left .5s cubic-bezier(.25,.46,.45,.94) both
 }
 
 .banner .text p {
     font-size: 20px;
     margin: 10px 0;
+    color: #170816;
+    animation:slide-in-left .5s cubic-bezier(.25,.46,.45,.94) 0.5s both
 }
 
 /* ----------------------------------------------
@@ -111,7 +114,7 @@ body {
     object-fit: cover;
     border-width: 10px;
     border-style: solid;
-    border-image: linear-gradient(to right, darkorchid, rgba(0, 0, 255, 0)) 1;
+    border-image: linear-gradient(to bottom, #1a0028, rgba(0, 0, 255, 0)) 1;
 }
 
 .content {
@@ -177,6 +180,7 @@ body {
     overflow: hidden;
     position: relative;
     transition: height 0.5s ease-in-out;
+    color: #170816;
 }
 
 .section:hover .text {
@@ -185,13 +189,15 @@ body {
 
 
 .section .text h2 {
+    color: #170816;
     font-size: 25px;
     font-weight: bold;
     margin: 10px 0;
 }
 
 .section .text p {
-    font-size: 18px;
+    color: #170816;
+    font-size: 25px;
     margin: 10px 0;
 }
 
@@ -201,9 +207,44 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 1rem;
+    height: 2rem;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #e8f7e9);
     transition: height 0.3s;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    outline: none;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-image: url("resources/jour.png");
+    background-size: cover;
+    border-radius: 50px;
+    transition: background-image 0.9s;
+    box-shadow: 0 2px 5px 1px gray;
+}
+
+input[type="checkbox"]:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #e8f7e9;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.9s;
+    background-color: #5cc3f3;
+}
+
+input[type="checkbox"]:checked::before {
+    background-image: url("resources/nuit.png");
+}
+
+.input[type="checkbox"]:checked {
+    transform: translateX(100%);
+    background-color: #d3d018;
 }
 
 .section:hover .text::after {
@@ -318,11 +359,14 @@ body {
     max-width: 100%;
     height: auto;
     display: block;
-
+}
+.example-image p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 .example-description {
-    font-size: 1rem;
+    font-size: 1.5rem;
     opacity: 1;
     transform: translateX(0);
 }
@@ -334,7 +378,6 @@ body {
 
 .example-description p {
     margin-bottom: 1rem;
-
 }
 
 .example-description pre {
