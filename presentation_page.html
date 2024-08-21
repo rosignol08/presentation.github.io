@@ -15,14 +15,43 @@
         
         <div class="container">
             <div class="banner">
-                <div class="theme-slider">
-                    <input type="checkbox" id="change_theme">
-                    <label for="theme-toggle"></label>
-                </div>
+                <input type="checkbox" id="checkbox">
+                    <script>
+                        var check = document.getElementById("checkbox");
+        
+                        check.onclick = () => {
+                            document.querySelector("body").classList.toggle("active");
+                            document.querySelector(".banner").classList.toggle("active");
+                            document.querySelector(".content").classList.toggle("active");
+                            document.querySelector(".footer").classList.toggle("active");
+                            document.querySelector("h1").classList.toggle("active");
+                            document.querySelector("p").classList.toggle("active");
+                            document.querySelector(".button").classList.toggle("active");
+                            document.querySelector(".image").classList.toggle("active");
+                            document.querySelector(".text").classList.toggle("active");
+                            document.querySelector(".section").classList.toggle("active");
+                            document.querySelector(".section2").classList.toggle("active");
+                            document.querySelector(".section3").classList.toggle("active");
+                            document.querySelector(".section4").classList.toggle("active");
+                            document.querySelector(".example").classList.toggle("active");
+                            document.querySelector(".back-to-top").classList.toggle("active");
+                            document.getElementById("para").classList.toggle("active");
+                            document.getElementById("titres_icon").classList.toggle("active");
+                            document.getElementById("titres_icon1").classList.toggle("active");
+                            document.getElementById("titres_icon2").classList.toggle("active");
+                            document.getElementById("titres_icon3").classList.toggle("active");
+                            document.getElementById("icon1").classList.toggle("active");
+                            document.getElementById("icon2").classList.toggle("active");
+                            document.getElementById("icon3").classList.toggle("active");
+                            document.getElementById("icon4").classList.toggle("active");
+                            document.querySelector("example-section").classList.toggle("active");
+                        }
+                    </script>
+                
                 <div class="text">
                     <h1>Romaric - Programmeur</h1>
                     <p>Innovation | Créativité | Rigueur</p>
-                    <p>Je suis un jeune programmeur passionné avec des compétences diverses en informatique. Je crée des jeux vidéo ainsi que des petits programmes à mes heures perdues. Explorez mon GitHub ainsi que mon Replit pour voir mes compétences en action.</p>
+                    <p id="para">Je suis un jeune programmeur passionné avec des compétences diverses en informatique. Je crée des jeux vidéo ainsi que des petits programmes à mes heures perdues. Explorez mon GitHub ainsi que mon Replit pour voir mes compétences en action.</p>
                     <!-- <a href="#" class="button">Explore plus</a> -->
                 </div>
                 <div class="image" class="tilt-in-fwd-tr">
@@ -35,38 +64,38 @@
                         <img src="resources/cv.svg" alt="cv">
                     </div>
                     <div class="text">
-                        <h2>Qui suis-je?</h2>
-                        <p>Découvrez mon parcours professionnel ainsi que mes compétences plus en détail dans mon cv.</p>
+                        <h2 id="titres_icon">Qui suis-je?</h2>
+                        <p id="icon1">Découvrez mon parcours professionnel ainsi que mes compétences plus en détail dans mon cv.</p>
                     </div>
                     <a href="resources/cv.pdf" class="button">Consultez mon CV</a>
                 </div>
-                <div class="section">
+                <div class="section2">
                     <div class="icon" style="animation-delay: 0.2s;">
                         <img src="resources/diploma-verified.svg" alt="univp8">
                     </div>
                     <div class="text">
-                        <h2>Mon diplôme</h2>
-                        <p>Consultez le site de ma license à l'université de Paris 8.</p>
+                        <h2 id="titres_icon1">Mon diplôme</h2>
+                        <p id="icon2">Consultez le site de ma license à l'université de Paris 8.</p>
                     </div>
                     <a href="https://informatique.up8.edu/licence-iv/" class="button">Site de ma licence</a>
                 </div>
-                <div class="section">
+                <div class="section3">
                     <div class="icon" style="animation-delay: 0.4s;">
                         <img src="resources/github.svg" alt="github">
                     </div>
                     <div class="text">
-                        <h2>Mon Github</h2>
-                        <p>Découvrez les différents projets que j'ai pu réaliser jusqu'à aujourd'hui.</p>
+                        <h2 id="titres_icon2">Mon Github</h2>
+                        <p id="icon3">Découvrez les différents projets que j'ai pu réaliser jusqu'à aujourd'hui.</p>
                     </div>
                     <a href="https://github.com/rosignol08" class="button">Mon Github</a>
                 </div>
-                <div class="section">
+                <div class="section4">
                     <div class="icon" style="animation-delay: 0.6s;">
                         <img src="resources/New_Replit_Logo.png" alt="replit">
                     </div>
                     <div class="text">
-                        <h2>Mon Replit</h2>
-                        <p>Découvrez ici les programmes que j'ai réalisés de manière plus générale.</p>
+                        <h2 id="titres_icon3">Mon Replit</h2>
+                        <p id="icon4">Découvrez ici les programmes que j'ai réalisés de manière plus générale.</p>
                     </div>
                     <a href="https://replit.com/@RomaricChaffray" class="button">Mon replit</a>
                 </div>
